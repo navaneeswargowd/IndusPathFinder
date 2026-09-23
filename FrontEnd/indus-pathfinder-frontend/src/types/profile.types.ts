@@ -63,7 +63,7 @@ export interface ProfileResponse {
 export interface ProfileRequest {
   firstName: string;
   lastName: string;
-  mobile: number;
+  mobile: string;
 }
 
 export interface ChangePasswordRequest {
