@@ -84,7 +84,7 @@ import {
   allowCinInput,
   allowEmailInput,
   allowGstInput,
-  allowLogoInput,
+  //allowLogoInput,
   allowNameInput,
   allowNumbersOnly,
   allowOrganizationName,
@@ -1852,7 +1852,7 @@ function ControlledTextField({
   multiline,
   minRows,
   maxRows,
-  onBeforeInput,
+  //onBeforeInput,
     onKeyDown,
 }: ControlledTextFieldProps) {
 
