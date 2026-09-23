@@ -207,7 +207,7 @@ export default function LandingPage() {
             </Typography>
 
 
-            <Stack
+            {/* <Stack
               direction={{
                 xs: "column",
                 sm: "row",
@@ -216,6 +216,15 @@ export default function LandingPage() {
               justifyContent="center"
               sx={{
                 mt: 4,
+              }}
+            > */}
+
+            <Stack
+              direction={{ xs: "column", sm: "row" }}
+              spacing={2}
+              sx={{
+                mt: 4,
+                justifyContent: "center",
               }}
             >
 
