@@ -19,7 +19,7 @@ public class CorsConfig {
                 new CorsConfiguration();
 
         configuration.setAllowedOrigins(
-                List.of("http://localhost:5173/")
+                List.of("https://indus-path-finder.vercel.app")
         );
 
         configuration.setAllowedMethods(
