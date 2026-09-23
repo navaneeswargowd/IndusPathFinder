@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jasperReport
+    xmlns="http://jasperreports.sourceforge.net/jasperreports"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports
+                        http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+    name="AuditLogReport"
+    language="java"
+    pageWidth="842"
+    pageHeight="595"
+    orientation="Landscape"
+    columnWidth="802"
+    leftMargin="20"
+    rightMargin="20"
+    topMargin="20"
+    bottomMargin="20"
+    whenNoDataType="AllSectionsNoDetail">
+
+    <parameter
+        name="reportTitle"
+        class="java.lang.String"/>
+
+    <field
+        name="auditId"
+        class="java.lang.Long"/>
+
+    <field
+        name="userId"
+        class="java.lang.Long"/>
+
+    <field
+        name="actionName"
+        class="java.lang.String"/>
+
+    <field
+        name="actionScreen"
+        class="java.lang.String"/>
+
+    <field
+        name="actionScreenId"
+        class="java.lang.Long"/>
+
+    <field
+        name="username"
+        class="java.lang.String"/>
+
+    <field
+        name="details"
+        class="java.lang.String"/>
+
+    <field
+        name="actionDate"
+        class="java.lang.String"/>
+
+    <title>
+        <band height="45">
+
+            <textField>
+                <reportElement
+                    x="0"
+                    y="0"
+                    width="802"
+                    height="30"/>
+
+                <textElement textAlignment="Center">
+                    <font size="18" isBold="true"/>
+                </textElement>
+
+                <textFieldExpression
+                    class="java.lang.String"><![CDATA[
+                    $P{reportTitle}
+                ]]></textFieldExpression>
+            </textField>
+
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="30">
+
+            <staticText>
+                <reportElement x="0" y="0" width="55" height="30"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Audit ID]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="55" y="0" width="55" height="30"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[User ID]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="110" y="0" width="120" height="30"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Action]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="230" y="0" width="100" height="30"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Screen]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="330" y="0" width="70" height="30"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Screen ID]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="400" y="0" width="100" height="30"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Username]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="500" y="0" width="180" height="30"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Details]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="680" y="0" width="122" height="30"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Action Date]]></text>
+            </staticText>
+
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="35">
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="0" y="0" width="55" height="35"/>
+                <textFieldExpression
+                    class="java.lang.Long"><![CDATA[
+                    $F{auditId}
+                ]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="55" y="0" width="55" height="35"/>
+                <textFieldExpression
+                    class="java.lang.Long"><![CDATA[
+                    $F{userId}
+                ]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="110" y="0" width="120" height="35"/>
+                <textFieldExpression
+                    class="java.lang.String"><![CDATA[
+                    $F{actionName}
+                ]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="230" y="0" width="100" height="35"/>
+                <textFieldExpression
+                    class="java.lang.String"><![CDATA[
+                    $F{actionScreen}
+                ]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="330" y="0" width="70" height="35"/>
+                <textFieldExpression
+                    class="java.lang.Long"><![CDATA[
+                    $F{actionScreenId}
+                ]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="400" y="0" width="100" height="35"/>
+                <textFieldExpression
+                    class="java.lang.String"><![CDATA[
+                    $F{username}
+                ]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="500" y="0" width="180" height="35"/>
+                <textFieldExpression
+                    class="java.lang.String"><![CDATA[
+                    $F{details}
+                ]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="680" y="0" width="122" height="35"/>
+                <textFieldExpression
+                    class="java.lang.String"><![CDATA[
+                    $F{actionDate}
+                ]]></textFieldExpression>
+            </textField>
+
+        </band>
+    </detail>
+
+    <pageFooter>
+        <band height="25">
+
+            <textField>
+                <reportElement x="650" y="5" width="152" height="20"/>
+
+                <textElement textAlignment="Right"/>
+
+                <textFieldExpression
+                    class="java.lang.String"><![CDATA[
+                    "Page " + $V{PAGE_NUMBER}
+                ]]></textFieldExpression>
+            </textField>
+
+        </band>
+    </pageFooter>
+
+</jasperReport>

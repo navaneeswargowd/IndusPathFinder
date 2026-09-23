@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jasperReport
+    xmlns="http://jasperreports.sourceforge.net/jasperreports"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://jasperreports.sourceforge.net/jasperreports
+        http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+    name="DependencyReport"
+    pageWidth="842"
+    pageHeight="595"
+    orientation="Landscape"
+    columnWidth="802"
+    leftMargin="20"
+    rightMargin="20"
+    topMargin="20"
+    bottomMargin="20">
+
+    <parameter name="reportTitle" class="java.lang.String"/>
+    <parameter name="projectId" class="java.lang.Long"/>
+
+    <field name="dependencyId" class="java.lang.Long"/>
+    <field name="projectId" class="java.lang.Long"/>
+    <field name="projectCode" class="java.lang.String"/>
+    <field name="predecessorActivityId" class="java.lang.Long"/>
+    <field name="predecessorActivityCode" class="java.lang.String"/>
+    <field name="predecessorActivityName" class="java.lang.String"/>
+    <field name="successorActivityId" class="java.lang.Long"/>
+    <field name="successorActivityCode" class="java.lang.String"/>
+    <field name="successorActivityName" class="java.lang.String"/>
+    <field name="dependencyType" class="java.lang.String"/>
+
+    <title>
+        <band height="50">
+
+            <textField>
+                <reportElement x="0" y="0" width="802" height="30"/>
+                <textElement textAlignment="Center">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{reportTitle}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="0" y="32" width="802" height="18"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression>
+                    <![CDATA["Project ID: " + $P{projectId}]]>
+                </textFieldExpression>
+            </textField>
+
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="35">
+
+            <staticText>
+                <reportElement x="0" y="0" width="65" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Dependency ID]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="65" y="0" width="75" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Project]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="140" y="0" width="70" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Pred. ID]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="210" y="0" width="85" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Pred. Code]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="295" y="0" width="130" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Predecessor]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="425" y="0" width="70" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Succ. ID]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="495" y="0" width="85" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Succ. Code]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="580" y="0" width="140" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Successor]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="720" y="0" width="82" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Type]]></text>
+            </staticText>
+
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="40">
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="0" y="0" width="65" height="40"/>
+                <textFieldExpression><![CDATA[$F{dependencyId}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="65" y="0" width="75" height="40"/>
+                <textFieldExpression><![CDATA[$F{projectCode}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="140" y="0" width="70" height="40"/>
+                <textFieldExpression><![CDATA[$F{predecessorActivityId}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="210" y="0" width="85" height="40"/>
+                <textFieldExpression><![CDATA[$F{predecessorActivityCode}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="295" y="0" width="130" height="40"/>
+                <textFieldExpression><![CDATA[$F{predecessorActivityName}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="425" y="0" width="70" height="40"/>
+                <textFieldExpression><![CDATA[$F{successorActivityId}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="495" y="0" width="85" height="40"/>
+                <textFieldExpression><![CDATA[$F{successorActivityCode}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="580" y="0" width="140" height="40"/>
+                <textFieldExpression><![CDATA[$F{successorActivityName}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="720" y="0" width="82" height="40"/>
+                <textFieldExpression><![CDATA[$F{dependencyType}]]></textFieldExpression>
+            </textField>
+
+        </band>
+    </detail>
+
+    <pageFooter>
+        <band height="25">
+            <textField>
+                <reportElement x="650" y="5" width="152" height="20"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression>
+                    <![CDATA["Page " + $V{PAGE_NUMBER}]]>
+                </textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+
+</jasperReport>

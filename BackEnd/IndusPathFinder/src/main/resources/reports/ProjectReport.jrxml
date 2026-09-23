@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jasperReport
+    xmlns="http://jasperreports.sourceforge.net/jasperreports"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://jasperreports.sourceforge.net/jasperreports
+        http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+    name="ProjectReport"
+    pageWidth="842"
+    pageHeight="595"
+    orientation="Landscape"
+    columnWidth="802"
+    leftMargin="20"
+    rightMargin="20"
+    topMargin="20"
+    bottomMargin="20">
+
+    <parameter name="reportTitle" class="java.lang.String"/>
+    <parameter name="projectId" class="java.lang.Long"/>
+
+    <field name="projectId" class="java.lang.Long"/>
+    <field name="projectCode" class="java.lang.String"/>
+    <field name="projectName" class="java.lang.String"/>
+    <field name="description" class="java.lang.String"/>
+    <field name="startDate" class="java.lang.String"/>
+    <field name="endDate" class="java.lang.String"/>
+    <field name="priority" class="java.lang.String"/>
+    <field name="status" class="java.lang.String"/>
+    <field name="createdBy" class="java.lang.String"/>
+    <field name="createdOn" class="java.lang.String"/>
+
+    <title>
+        <band height="50">
+
+            <textField>
+                <reportElement
+                    x="0"
+                    y="0"
+                    width="802"
+                    height="30"/>
+
+                <textElement textAlignment="Center">
+                    <font size="18" isBold="true"/>
+                </textElement>
+
+                <textFieldExpression>
+                    <![CDATA[$P{reportTitle}]]>
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement
+                    x="0"
+                    y="32"
+                    width="802"
+                    height="18"/>
+
+                <textElement textAlignment="Center">
+                    <font size="10"/>
+                </textElement>
+
+                <textFieldExpression>
+                    <![CDATA[
+                        "Project ID: " + $P{projectId}
+                    ]]>
+                </textFieldExpression>
+            </textField>
+
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="35">
+
+            <staticText>
+                <reportElement x="0" y="0" width="55" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[ID]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="55" y="0" width="75" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Code]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="130" y="0" width="115" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Project Name]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="245" y="0" width="145" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Description]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="390" y="0" width="75" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Start Date]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="465" y="0" width="75" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[End Date]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="540" y="0" width="65" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Priority]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="605" y="0" width="65" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Status]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="670" y="0" width="65" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Created By]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="735" y="0" width="67" height="35"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Created On]]></text>
+            </staticText>
+
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="40">
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="0" y="0" width="55" height="40"/>
+                <textFieldExpression><![CDATA[$F{projectId}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="55" y="0" width="75" height="40"/>
+                <textFieldExpression><![CDATA[$F{projectCode}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="130" y="0" width="115" height="40"/>
+                <textFieldExpression><![CDATA[$F{projectName}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true" textAdjust="StretchHeight">
+                <reportElement x="245" y="0" width="145" height="40"/>
+                <textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="390" y="0" width="75" height="40"/>
+                <textFieldExpression><![CDATA[$F{startDate}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="465" y="0" width="75" height="40"/>
+                <textFieldExpression><![CDATA[$F{endDate}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="540" y="0" width="65" height="40"/>
+                <textFieldExpression><![CDATA[$F{priority}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="605" y="0" width="65" height="40"/>
+                <textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="670" y="0" width="65" height="40"/>
+                <textFieldExpression><![CDATA[$F{createdBy}]]></textFieldExpression>
+            </textField>
+
+            <textField isBlankWhenNull="true">
+                <reportElement x="735" y="0" width="67" height="40"/>
+                <textFieldExpression><![CDATA[$F{createdOn}]]></textFieldExpression>
+            </textField>
+
+        </band>
+    </detail>
+
+    <pageFooter>
+        <band height="25">
+
+            <textField>
+                <reportElement x="650" y="5" width="152" height="20"/>
+                <textElement textAlignment="Right"/>
+
+                <textFieldExpression>
+                    <![CDATA["Page " + $V{PAGE_NUMBER}]]>
+                </textFieldExpression>
+            </textField>
+
+        </band>
+    </pageFooter>
+
+</jasperReport>
