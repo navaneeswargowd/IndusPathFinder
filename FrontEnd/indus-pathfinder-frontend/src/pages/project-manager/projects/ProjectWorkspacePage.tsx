@@ -2006,88 +2006,88 @@ function Detail({
  * ==========================================================
  */
 
-function ModulePlaceholder({
-  title,
-  description,
-}: {
-  title:
-    string;
+// function ModulePlaceholder({
+//   title,
+//   description,
+// }: {
+//   title:
+//     string;
 
-  description:
-    string;
-}) {
+//   description:
+//     string;
+// }) {
 
-  return (
-    <Paper
-      elevation={0}
+//   return (
+//     <Paper
+//       elevation={0}
 
-      sx={{
-        p:
-          4,
+//       sx={{
+//         p:
+//           4,
 
-        minHeight:
-          280,
+//         minHeight:
+//           280,
 
-        display:
-          "flex",
+//         display:
+//           "flex",
 
-        flexDirection:
-          "column",
+//         flexDirection:
+//           "column",
 
-        alignItems:
-          "center",
+//         alignItems:
+//           "center",
 
-        justifyContent:
-          "center",
+//         justifyContent:
+//           "center",
 
-        textAlign:
-          "center",
+//         textAlign:
+//           "center",
 
-        border:
-          "1px solid",
+//         border:
+//           "1px solid",
 
-        borderColor:
-          "divider",
+//         borderColor:
+//           "divider",
 
-        borderRadius:
-          3,
-      }}
-    >
+//         borderRadius:
+//           3,
+//       }}
+//     >
 
-      <Typography
-        sx={{
-          fontSize:
-            "1rem",
+//       <Typography
+//         sx={{
+//           fontSize:
+//             "1rem",
 
-          fontWeight:
-            700,
-        }}
-      >
-        {title}
-      </Typography>
+//           fontWeight:
+//             700,
+//         }}
+//       >
+//         {title}
+//       </Typography>
 
 
-      <Typography
-        sx={{
-          mt:
-            0.8,
+//       <Typography
+//         sx={{
+//           mt:
+//             0.8,
 
-          maxWidth:
-            500,
+//           maxWidth:
+//             500,
 
-          color:
-            "text.secondary",
+//           color:
+//             "text.secondary",
 
-          fontSize:
-            "0.8rem",
-        }}
-      >
-        {description}
-      </Typography>
+//           fontSize:
+//             "0.8rem",
+//         }}
+//       >
+//         {description}
+//       </Typography>
 
-    </Paper>
-  );
-}
+//     </Paper>
+//   );
+// }
 
 
 /*
