@@ -132,6 +132,7 @@ public class CategoryServiceImpl implements CategoryService{
 		response.setCategoryName(category.getCategoryName());
 		response.setStatus(category.getStatus());
 		response.setCreateOn(category.getCreateOn());
+		response.setUpdateOn(category.getUpdateOn());
 		
 		return response;
 	}
@@ -375,6 +376,8 @@ public class CategoryServiceImpl implements CategoryService{
 	    response.setStatus(category.getStatus());
 
 	    response.setCreateOn(category.getCreateOn());
+
+		response.setUpdateOn(category.getUpdateOn());
 
 	    return response;
 	}
