@@ -139,14 +139,14 @@ const STEP_THREE_FIELDS:
   ];
 
 
-const STEP_FOUR_FIELDS:
-  (keyof RegistrationFormValues)[] = [
-    "firstName",
-    "lastName",
-    "userName",
-    "email",
-    "contact",
-  ];
+// const STEP_FOUR_FIELDS:
+//   (keyof RegistrationFormValues)[] = [
+//     "firstName",
+//     "lastName",
+//     "userName",
+//     "email",
+//     "contact",
+//   ];
 
 
 /*
