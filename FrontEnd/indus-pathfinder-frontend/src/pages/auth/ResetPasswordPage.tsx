@@ -66,8 +66,8 @@ import {
   allowPasswordInput,
 } from "../../utils/validation.utils";
 
-//import FormTextField from "../../components/forms/FormTextField";
-import FormPasswordField from "../../components/forms/FormPasswordField";
+import FormTextField from "../../components/forms/FormTextField";
+//import FormPasswordField from "../../components/forms/FormPasswordField";
 import PrimaryButton from "../../components/buttons/PrimaryButton";
 
 export default function ResetPasswordPage() {
